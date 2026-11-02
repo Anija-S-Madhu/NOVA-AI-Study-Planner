@@ -123,7 +123,7 @@ Open your browser:
 http://127.0.0.1:5000
 ```
 
-## ðŸ§ª Run Tests
+## Run Tests
 
 Execute the test suite:
 
@@ -131,22 +131,19 @@ Execute the test suite:
 python -m pytest -q
 ```
 
-## ðŸ” Security and Privacy
+## Security and Privacy
 
 * Environment variables are used for sensitive configuration.
 * User-specific academic records are associated with authenticated accounts.
 * Uploaded documents are stored outside the public static directory.
 * Local databases, environment files, and uploaded files are excluded from Git tracking.
 
-## ðŸ“¸ Screenshots
 
-Screenshots of the NOVA AI application will be added here.
-
-## ðŸŽ¯ Project Objective
+##  Project Objective
 
 The objective of NOVA AI is to combine intelligent academic assistance with structured study planning, helping students manage their learning activities more effectively.
 
-## ðŸ‘©â€ðŸ’» Developer
+##  Developer
 
 Developed as an AI-powered academic productivity project.
 
