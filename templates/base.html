@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>{% block title %}NOVA AI{% endblock %}</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+
+<!-- NOVA AI Chatbot CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}">
+
+{% block styles %}{% endblock %}
+```
+
+</head>
+
+<body>
+
+```
+{% if current_user.id %}
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg nav-nova">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="{{ url_for('dashboard') }}">
+            <i class="fa-solid fa-compass"></i> NOVA
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#nav">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+
+            <div class="navbar-nav ms-auto">
+
+                <a class="nav-link" href="{{ url_for('dashboard') }}">
+                    <i class="fa-solid fa-house"></i> Dashboard
+                </a>
+
+                <a class="nav-link" href="{{ url_for('subjects') }}">
+                    <i class="fa-solid fa-book"></i> Subjects
+                </a>
+
+                <a class="nav-link" href="{{ url_for('tasks') }}">
+                    <i class="fa-solid fa-list-check"></i> Tasks
+                </a>
+
+                <a class="nav-link" href="{{ url_for('planner') }}">
+                    <i class="fa-solid fa-calendar-days"></i> Planner
+                </a>
+
+                <a class="nav-link" href="{{ url_for('documents') }}">
+                    <i class="fa-solid fa-folder-open"></i> Library
+                </a>
+
+                <a class="nav-link" href="{{ url_for('assistant') }}">
+                    <i class="fa-solid fa-robot"></i> AI Tutor
+                </a>
+
+                <form method="post" action="{{ url_for('logout') }}">
+                    <button class="btn btn-sm btn-outline-light ms-lg-2">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Sign out
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+{% endif %}
+
+<!-- MAIN CONTENT -->
+<main class="container py-4">
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+        {% for category, message in messages %}
+
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+
+        {% endfor %}
+
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+
+</main>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Page-specific JavaScript -->
+{% block scripts %}{% endblock %}
+```
+
+</body>
+</html>
