@@ -30,44 +30,40 @@ NOVA AI is a web-based study management application developed using Python Flask
 | PDF Generation          | ReportLab                        |
 | Testing                 | Pytest                           |
 
-## ðŸ“ Project Structure
-
-```text
+#Project Structure
 AI_Study_Planner/
-â”‚
-â”œâ”€â”€ app.py
-â”œâ”€â”€ config.py
-â”œâ”€â”€ database.py
-â”œâ”€â”€ requirements.txt
-â”œâ”€â”€ requirements.production.txt
-â”œâ”€â”€ .env.example
-â”œâ”€â”€ .gitignore
-â”‚
-â”œâ”€â”€ templates/
-â”‚   â”œâ”€â”€ index.html
-â”‚   â”œâ”€â”€ auth.html
-â”‚   â”œâ”€â”€ base.html
-â”‚   â”œâ”€â”€ dashboard.html
-â”‚   â”œâ”€â”€ subjects.html
-â”‚   â”œâ”€â”€ subject_form.html
-â”‚   â”œâ”€â”€ tasks.html
-â”‚   â”œâ”€â”€ timetable.html
-â”‚   â”œâ”€â”€ documents.html
-â”‚   â””â”€â”€ chatbot.html
-â”‚
-â”œâ”€â”€ static/
-â”‚   â”œâ”€â”€ css/
-â”‚   â””â”€â”€ js/
-â”‚
-â”œâ”€â”€ utils/
-â”‚   â”œâ”€â”€ pdf_export.py
-â”‚   â”œâ”€â”€ priority.py
-â”‚   â””â”€â”€ scheduler.py
-â”‚
-â””â”€â”€ tests/
-    â””â”€â”€ test_scheduler.py
-```
-
+|
+|-- app.py
+|-- config.py
+|-- database.py
+|-- requirements.txt
+|-- requirements.production.txt
+|-- .env.example
+|-- .gitignore
+|
+|-- templates/
+|   |-- index.html
+|   |-- auth.html
+|   |-- base.html
+|   |-- dashboard.html
+|   |-- subjects.html
+|   |-- subject_form.html
+|   |-- tasks.html
+|   |-- timetable.html
+|   |-- documents.html
+|   |-- chatbot.html
+|
+|-- static/
+|   |-- css/
+|   |-- js/
+|
+|-- utils/
+|   |-- pdf_export.py
+|   |-- priority.py
+|   |-- scheduler.py
+|
+|-- tests/
+    |-- test_scheduler.py
 ## âš™ï¸ Installation and Setup
 
 ### 1. Clone the repository
